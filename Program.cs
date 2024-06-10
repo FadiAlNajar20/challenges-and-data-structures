@@ -1,4 +1,6 @@
-﻿namespace challenges_and_data_structures
+﻿using static System.Net.Mime.MediaTypeNames;
+
+namespace challenges_and_data_structures
 {
     internal class Program
     {
@@ -52,6 +54,8 @@
         }
         static void Main(string[] args)
         {
+            /* Reversal Array */
+
             //int[] arr = { 1, 2, 3, 4, 5 };
             //int[] result = ArrayReversal(arr);
             //Console.WriteLine("The Revers Array: ");
@@ -59,14 +63,35 @@
             //Console.WriteLine("\n");
 
 
+            /* Most Frequent Number */
+            //int[] arr1 = { 1, 1, 2, 2, 3, 3, 3, 1, 1, 5, 5, 6, 7, 8, 2, 1, 1 };
+            //int resultForMostFrequentNumber = MostFrequentNumber(arr1);
+            //Console.WriteLine("The  Most Frequent Number: ");
+            //Console.WriteLine(resultForMostFrequentNumber);
 
-            int[] arr1 = { 1, 1, 2, 2, 3, 3, 3, 1, 1, 5, 5, 6, 7, 8, 2, 1, 1 };
-            int resultForMostFrequentNumber = MostFrequentNumber(arr1);
-            Console.WriteLine("The  Most Frequent Number: ");
-            Console.WriteLine(resultForMostFrequentNumber);
+            /* Maximum Value */
+
+            //int[] test1 = { 1, 3, 5, 7, 9 };
+            //int[] test2 = { 7, 9, 13, 25, 5 };
+            int[] arr = { 10, 15, 8, 6, 12 };
+            int result = MaximumValue(arr);
+            Console.WriteLine($"The Max number: {result}");
+
+            Console.ReadKey();
         }
 
+        public static int MaximumValue(int[] arr)
+        {
+            int max = arr[0];
 
-
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (max < arr[i])
+                {
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
     }
 }
