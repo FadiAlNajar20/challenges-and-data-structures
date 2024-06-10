@@ -1,0 +1,3 @@
+### Challenge A: Array Reversal
+#### The Array Reversal challenge involves creating a function that accepts an array as its parameter and returns a new array where the elements are in reverse order. The key requirement is to achieve this without using any built-in methods provided by the C# language. This challenge tests the ability to manipulate arrays and implement custom algorithms to reverse the elements of the input array.
+![Most Frequent Number Whiteboard](./Revers_Array.jpg)

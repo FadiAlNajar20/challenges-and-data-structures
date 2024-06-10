@@ -1,0 +1,3 @@
+### Challenge B: Most Frequent Number
+#### The Most Frequent Number challenge requires the creation of a method that takes an integer array as input and returns the number that appears the most times. If there are no duplicates, the first number in the array should be returned. In cases where more than one number shows up the same number of times, the first found number is to be returned. This challenge typically involves implementing a solution that efficiently counts the frequency of each number in the array and identifies the most frequently occurring number.
+![Most Frequent Number Whiteboard](./Most_Frequent_Number.PNG)
