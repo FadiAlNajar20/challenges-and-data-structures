@@ -52,11 +52,11 @@
         }
         static void Main(string[] args)
         {
-            int[] arr = { 1, 2, 3, 4, 5 };
-            int[] result = ArrayReversal(arr);
-            Console.WriteLine("The Revers Array: ");
-            Print(result);
-            Console.WriteLine("\n");
+            //int[] arr = { 1, 2, 3, 4, 5 };
+            //int[] result = ArrayReversal(arr);
+            //Console.WriteLine("The Revers Array: ");
+            //Print(result);
+            //Console.WriteLine("\n");
 
 
 
