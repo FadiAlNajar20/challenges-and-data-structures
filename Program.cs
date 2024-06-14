@@ -80,7 +80,7 @@ namespace challenges_and_data_structures
             Console.ReadKey();
         }
 
-        public static int MaximumValue(int[] arr)
+        public static int MaximumValue(int[] arr)   
         {
             int max = arr[0];
 
