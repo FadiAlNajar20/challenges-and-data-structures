@@ -51,6 +51,7 @@ namespace challenges_and_data_structures
             {
                 Console.Write(key + " ");
             }
+            Console.WriteLine();
         }
         static void Main(string[] args)
         {
@@ -73,14 +74,29 @@ namespace challenges_and_data_structures
 
             //int[] test1 = { 1, 3, 5, 7, 9 };
             //int[] test2 = { 7, 9, 13, 25, 5 };
-            int[] arr = { 10, 15, 8, 6, 12 };
-            int result = MaximumValue(arr);
-            Console.WriteLine($"The Max number: {result}");
+            //int[] arr = { 10, 15, 8, 6, 12 };
+            //int result = MaximumValue(arr);
+            //Console.WriteLine($"The Max number: {result}");
+
+
+            // Remove Middle Value
+            int[] input = {1, 2, 3, 4, 5}; // Output: [1, 2, 4, 5]
+
+            int[] input2 = { 27, 8, 15, 73, 27 }; // Output: [27, 8, 73, 27]
+
+            int[] input3 = { 7, 9, 13, 25, 5, 17 };  // Output: [7, 9, 13, 5, 17]
+
+            int[] result1 = RemoveMiddleValue(input);
+            int[] result2 = RemoveMiddleValue(input2);
+            int[] result3 = RemoveMiddleValue(input3);
+            Print(result1);
+            Print(result2);
+            Print(result3);
 
             Console.ReadKey();
         }
 
-        public static int MaximumValue(int[] arr)
+        public static int MaximumValue(int[] arr)   
         {
             int max = arr[0];
 
@@ -93,5 +109,20 @@ namespace challenges_and_data_structures
             }
             return max;
         }
+
+        public static int[] RemoveMiddleValue(int[] array)
+        {
+            int middleIndex = array.Length / 2;
+            int[] modifiedArray = new int[array.Length - 1];
+            for (int i = 0, j = 0; i < array.Length; i++)
+            {
+                if (i != middleIndex)
+                    modifiedArray[j++] = array[i];
+            }
+            return modifiedArray;
+        }
+
     }
 }
+
+
