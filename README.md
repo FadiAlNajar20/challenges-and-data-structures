@@ -14,3 +14,7 @@
 ### Challenge 02: Maximum Value
 ![Maximum-Value](./whiteboard-challenges/MaximumValue/mavValue.png)
 [Go To README](./whiteboard-challenges/MaximumValue/README.md)
+
+### Challenge 03: Remove Middle Value
+![Remove Middle Value from Array](./whiteboard-challenges/RemoveMiddleValue/removefromarray.png)
+[Go To README](./whiteboard-challenges/RemoveMiddleValue/README.md)
