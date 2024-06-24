@@ -80,18 +80,31 @@ namespace challenges_and_data_structures
 
 
             // Remove Middle Value
-            int[] input = {1, 2, 3, 4, 5}; // Output: [1, 2, 4, 5]
+            //int[] input = {1, 2, 3, 4, 5}; // Output: [1, 2, 4, 5]
 
-            int[] input2 = { 27, 8, 15, 73, 27 }; // Output: [27, 8, 73, 27]
+            //int[] input2 = { 27, 8, 15, 73, 27 }; // Output: [27, 8, 73, 27]
 
-            int[] input3 = { 7, 9, 13, 25, 5, 17 };  // Output: [7, 9, 13, 5, 17]
+            //int[] input3 = { 7, 9, 13, 25, 5, 17 };  // Output: [7, 9, 13, 5, 17]
 
-            int[] result1 = RemoveMiddleValue(input);
-            int[] result2 = RemoveMiddleValue(input2);
-            int[] result3 = RemoveMiddleValue(input3);
-            Print(result1);
-            Print(result2);
-            Print(result3);
+            //int[] result1 = RemoveMiddleValue(input);
+            //int[] result2 = RemoveMiddleValue(input2);
+            //int[] result3 = RemoveMiddleValue(input3);
+            //Print(result1);
+            //Print(result2);
+            //Print(result3);
+
+            // Middle Value
+            int[] testArray1 = { 1, 2, 3, 4 };
+            int[] result1 = MiddleValue(testArray1);
+            Print(result1);  // Output: [1, 2, 5, 3, 4]
+
+            int[] testArray2 = { 10, 20, 30, 40, 50 };
+            int[] result2 = MiddleValue(testArray2);
+            Print(result2);  // Output: [10, 20, 30, 25, 40, 50]
+
+            int[] testArray3 = { 7, 14, 21, 28 };
+            int[] result3 = MiddleValue(testArray3);
+            Print(result3);  // Output: [7, 14, 10, 21, 28]
 
             Console.ReadKey();
         }
@@ -121,6 +134,24 @@ namespace challenges_and_data_structures
             }
             return modifiedArray;
         }
+
+        public static int[] MiddleValue(int[] array, int valueToAdd)
+        {
+            int middleIndex = (array.Length + 1) / 2;
+            int[] modifiedArray = new int[array.Length + 1];
+
+            for (int i = 0, j = 0; i < array.Length; i++, j++)
+            {
+                if (middleIndex == j)
+                {
+                    modifiedArray[j++] = valueToAdd;
+                }
+                modifiedArray[j] = array[i];
+            }
+
+            return modifiedArray;
+        }
+
 
     }
 }
