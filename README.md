@@ -18,3 +18,7 @@
 ### Challenge 03: Remove Middle Value
 ![Remove Middle Value from Array](./whiteboard-challenges/RemoveMiddleValue/removefromarray.png)
 [Go To README](./whiteboard-challenges/RemoveMiddleValue/README.md)
+
+### Challenge 04: Insert Middle Value
+![Insert Middle Value](./whiteboard-challenges/InsertMiddleVlaue/insertValue.PNG)
+[Go To README](./whiteboard-challenges/InsertMiddleVlaue/README.md)
