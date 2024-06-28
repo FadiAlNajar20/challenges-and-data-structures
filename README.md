@@ -22,3 +22,7 @@
 ### Challenge 04: Insert Middle Value
 ![Insert Middle Value](./whiteboard-challenges/InsertMiddleVlaue/insertValue.PNG)
 [Go To README](./whiteboard-challenges/InsertMiddleVlaue/README.md)
+
+### Challenge 05: Find-Duplicates
+![Find Duplicates](./Challenges/Find-Duplicates/FindDuplicates.png)
+[Go To README](./Challenges/Find-Duplicates/README.md)
