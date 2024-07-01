@@ -26,3 +26,7 @@
 ### Challenge 05: Find-Duplicates
 ![Find Duplicates](./Challenges/Find-Duplicates/FindDuplicates.png)
 [Go To README](./Challenges/Find-Duplicates/README.md)
+
+
+# Challenge 06-A: Common Elements
+[Go To README](./Challenges/Common-Elements/README.md)
