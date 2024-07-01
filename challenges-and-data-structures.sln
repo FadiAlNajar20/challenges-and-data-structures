@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "challenges-and-data-structures", "challenges-and-data-structures.csproj", "{B3BAC5A7-2AA1-40DB-96A7-075B19FCC170}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "challenges-and-data-structures", "challenges-and-data-structures.csproj", "{B3BAC5A7-2AA1-40DB-96A7-075B19FCC170}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeTest", "..\ChallengeTest\ChallengeTest.csproj", "{333E396F-82BA-4F96-AA02-EFF0351A2082}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{B3BAC5A7-2AA1-40DB-96A7-075B19FCC170}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3BAC5A7-2AA1-40DB-96A7-075B19FCC170}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3BAC5A7-2AA1-40DB-96A7-075B19FCC170}.Release|Any CPU.Build.0 = Release|Any CPU
+		{333E396F-82BA-4F96-AA02-EFF0351A2082}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{333E396F-82BA-4F96-AA02-EFF0351A2082}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{333E396F-82BA-4F96-AA02-EFF0351A2082}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{333E396F-82BA-4F96-AA02-EFF0351A2082}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

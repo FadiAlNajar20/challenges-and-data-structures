@@ -2,7 +2,7 @@
 
 namespace challenges_and_data_structures
 {
-    internal class Program
+    public class Program
     {
         public static int[] ArrayReversal(int[] array)
         {
@@ -51,7 +51,7 @@ namespace challenges_and_data_structures
             {
                 Console.Write(key + " ");
             }
-            //Console.WriteLine();
+            Console.WriteLine();
         }
         static void Main(string[] args)
         {
@@ -107,22 +107,37 @@ namespace challenges_and_data_structures
             //Print(result3);  // Output: [7, 14, 10, 21, 28]
 
 
-            int[] testArray1 = { 1, 2, 3, 1, 2, 3 };
-            int[] testArray2 = { 16, 8, 31, 17, 15, 23, 17, 8 };
-            int[] testArray3 = { 5, 10, 16, 20, 10, 16 };
+            //int[] testArray1 = { 1, 2, 3, 1, 2, 3 };
+            //int[] testArray2 = { 16, 8, 31, 17, 15, 23, 17, 8 };
+            //int[] testArray3 = { 5, 10, 16, 20, 10, 16 };
 
             //Console.WriteLine("Test Array 2: " + string.Join(" ", FindDuplicates(testArray2)));
             //Console.WriteLine("Test Array 3: " + string.Join(" ", FindDuplicates(testArray3)));
 
-            Print(testArray1);
-            Console.Write(" --> ");
-            Console.Write(string.Join(" ", FindDuplicates(testArray1)) + "\n");
-            Print(testArray2);
-            Console.Write(" --> ");
-            Console.Write(string.Join(" ", FindDuplicates(testArray2)) + "\n");
-            Print(testArray3);
-            Console.Write(" --> ");
-            Console.Write(string.Join(" ", FindDuplicates(testArray3)));
+            //Print(testArray1);
+            //Console.Write(" --> ");
+            //Console.Write(string.Join(" ", FindDuplicates(testArray1)) + "\n");
+            //Print(testArray2);
+            //Console.Write(" --> ");
+            //Console.Write(string.Join(" ", FindDuplicates(testArray2)) + "\n");
+            //Print(testArray3);
+            //Console.Write(" --> ");
+            //Console.Write(string.Join(" ", FindDuplicates(testArray3)));
+
+            Console.WriteLine("Case One:");
+            int[] testArray1 = { 1, 2, 3, 0 };
+            int[] testArray2 = { 2, 3, 4, 9 };
+            Print(CommonElements(testArray1, testArray2));
+
+            Console.WriteLine("\nCase Two:");
+            int[] testArray3 = { 79, 8, 15 };
+            int[] testArray4 = { 23, 79, 8 };
+            Print(CommonElements(testArray3, testArray4));
+
+            Console.WriteLine("\nCase Three:");
+            int[] testArray5 = { 5, 10, 15, 20 };
+            int[] testArray6 = { 10, 15, 25 };
+            Print(CommonElements(testArray5, testArray6));
 
             Console.ReadKey();
         }
@@ -192,6 +207,29 @@ namespace challenges_and_data_structures
 
                 return storDuplicates.ToArray();
             }
+
+        public static int[] CommonElements(int[] arr1, int[] arr2)
+        {
+            List<int> newArr = new List<int>();
+
+
+            for (int i = 0; i < arr1.Length; i++)
+            {
+                int value = arr1[i];
+                for (int j = 0; j < arr2.Length; j++)
+                {
+                    if (value == arr2[j])
+                    {
+                        newArr.Add(value);
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+            }
+            return newArr.ToArray();
+        }
 
     }
 }
