@@ -1,4 +1,5 @@
-﻿using static System.Net.Mime.MediaTypeNames;
+﻿using challenges_and_data_structures;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace challenges_and_data_structures
 {
@@ -124,21 +125,37 @@ namespace challenges_and_data_structures
             //Console.Write(" --> ");
             //Console.Write(string.Join(" ", FindDuplicates(testArray3)));
 
-            Console.WriteLine("Case One:");
-            int[] testArray1 = { 1, 2, 3, 0 };
-            int[] testArray2 = { 2, 3, 4, 9 };
-            Print(CommonElements(testArray1, testArray2));
+            //Console.WriteLine("Case One:");
+            //int[] testArray1 = { 1, 2, 3, 0 };
+            //int[] testArray2 = { 2, 3, 4, 9 };
+            //Print(CommonElements(testArray1, testArray2));
 
-            Console.WriteLine("\nCase Two:");
-            int[] testArray3 = { 79, 8, 15 };
-            int[] testArray4 = { 23, 79, 8 };
-            Print(CommonElements(testArray3, testArray4));
+            //Console.WriteLine("\nCase Two:");
+            //int[] testArray3 = { 79, 8, 15 };
+            //int[] testArray4 = { 23, 79, 8 };
+            //Print(CommonElements(testArray3, testArray4));
 
-            Console.WriteLine("\nCase Three:");
-            int[] testArray5 = { 5, 10, 15, 20 };
-            int[] testArray6 = { 10, 15, 25 };
-            Print(CommonElements(testArray5, testArray6));
+            //Console.WriteLine("\nCase Three:");
+            //int[] testArray5 = { 5, 10, 15, 20 };
+            //int[] testArray6 = { 10, 15, 25 };
+            //Print(CommonElements(testArray5, testArray6));
 
+            //string result = ReverseWords.Reverse_Words("Hi for main");
+            //Console.WriteLine(result);
+            string case1 = "csharp is programming language";
+            string case2 = "Reverse the words in this sentence";
+            string case3 = "challenges and data structures";
+
+            Console.WriteLine($"Input: \"{case1}\"");
+            Console.WriteLine($"Output: \"{ReverseWords.Reverse_Words(case1)}\"");
+            Console.WriteLine();
+            Console.WriteLine($"Input: \"{case2}\"");
+            Console.WriteLine($"Output: \"{ReverseWords.Reverse_Words(case2)}\"");
+            Console.WriteLine();
+            Console.WriteLine($"Input: \"{case3}\"");
+            Console.WriteLine($"Output: \"{ReverseWords.Reverse_Words(case3)}\"");
+            Console.WriteLine();
+            
             Console.ReadKey();
         }
 
