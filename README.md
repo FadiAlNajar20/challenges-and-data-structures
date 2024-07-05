@@ -30,3 +30,6 @@
 
 # Challenge 06-A: Common Elements
 [Go To README](./Challenges/Common-Elements/README.md)
+
+# Challenge 06-B: Reverse Words
+[Go To README](./Challenges/Reverse-Words/README.md)
