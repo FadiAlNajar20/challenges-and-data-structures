@@ -1,4 +1,6 @@
 ﻿using challenges_and_data_structures;
+using challenges_and_data_structures.DataStructures.LinkedList;
+using System.Collections.Generic;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace challenges_and_data_structures
@@ -142,20 +144,48 @@ namespace challenges_and_data_structures
 
             //string result = ReverseWords.Reverse_Words("Hi for main");
             //Console.WriteLine(result);
-            string case1 = "csharp is programming language";
-            string case2 = "Reverse the words in this sentence";
-            string case3 = "challenges and data structures";
+            //string case1 = "csharp is programming language";
+            //string case2 = "Reverse the words in this sentence";
+            //string case3 = "challenges and data structures";
 
-            Console.WriteLine($"Input: \"{case1}\"");
-            Console.WriteLine($"Output: \"{ReverseWords.Reverse_Words(case1)}\"");
-            Console.WriteLine();
-            Console.WriteLine($"Input: \"{case2}\"");
-            Console.WriteLine($"Output: \"{ReverseWords.Reverse_Words(case2)}\"");
-            Console.WriteLine();
-            Console.WriteLine($"Input: \"{case3}\"");
-            Console.WriteLine($"Output: \"{ReverseWords.Reverse_Words(case3)}\"");
-            Console.WriteLine();
-            
+            //Console.WriteLine($"Input: \"{case1}\"");
+            //Console.WriteLine($"Output: \"{ReverseWords.Reverse_Words(case1)}\"");
+            //Console.WriteLine();
+            //Console.WriteLine($"Input: \"{case2}\"");
+            //Console.WriteLine($"Output: \"{ReverseWords.Reverse_Words(case2)}\"");
+            //Console.WriteLine();
+            //Console.WriteLine($"Input: \"{case3}\"");
+            //Console.WriteLine($"Output: \"{ReverseWords.Reverse_Words(case3)}\"");
+            //Console.WriteLine();
+
+            LinkedList list1 = new LinkedList();
+            list1.AddToHead(5);
+            list1.AddToHead(10);
+            list1.AddToHead(20);
+            list1.AddToHead(30);
+            Console.WriteLine("ADD from Head: ");
+            list1.PrintList();
+
+            LinkedList list = new LinkedList();
+            list.AddToTial(5);
+            list.AddToTial(10);
+            list.AddToTial(20);
+            list.AddToTial(30);
+            Console.WriteLine("\nADD from Tail: ");
+            list.PrintList();
+
+            Console.WriteLine("\nRemov The Head");
+            list.RemoveHead();
+            list.PrintList();
+
+            Console.WriteLine("\nRemov The specific number");
+            list.Remove(10);
+            list.PrintList();
+
+            Console.WriteLine("\nIs includes number '20'");
+            bool result = list.Includes(20);
+            Console.WriteLine(result);
+
             Console.ReadKey();
         }
 

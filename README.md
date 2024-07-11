@@ -33,3 +33,6 @@
 
 # Challenge 06-B: Reverse Words
 [Go To README](./Challenges/Reverse-Words/README.md)
+
+# Linked List Implementation
+[Go To README](./DataStructures/LinkedList/README.md)
