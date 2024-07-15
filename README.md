@@ -36,3 +36,6 @@
 
 # Linked List Implementation
 [Go To README](./DataStructures/LinkedList/README.md)
+
+# Linked List Remove Duplicates
+[Remove Duplicates](./DataStructures/LinkedList/RemoveDuplicates/README.md)

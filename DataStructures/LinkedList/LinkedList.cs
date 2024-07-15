@@ -9,6 +9,7 @@ namespace challenges_and_data_structures.DataStructures.LinkedList
     public class LinkedList
     {
         public Node head;
+        public int Length { get; set; }
 
         public LinkedList()
         {
@@ -44,38 +45,37 @@ namespace challenges_and_data_structures.DataStructures.LinkedList
                 }
                 current.Next = node;
             }
+            Length++;
         }
         public int RemoveHead()
         {
-            Node node = head;
             if (IsEmpty()) Console.WriteLine("The List is Empty");
 
-            node = head;
+            Node node = head;
             head = node.Next;
             node.Next = null;
             return node.Value;
+           
         }
 
         public void Remove(int delValue)
         {
-            Node node = new Node(delValue);
             if (IsEmpty()) Console.WriteLine("The List is Empty");
-
             if (head.Value == delValue)
             {
-                RemoveHead();
+                head = head.Next;
                 return;
             }
 
-                Node current = head;
-                Node prev = null;
-                while (current != null && current.Value != delValue)
-                {
-                    prev = current;
-                    current = current.Next;
-                }
+            Node current = head;
+            Node? prev = null;
+            while (current != null && current.Value != delValue)
+            {
+                prev = current;
+                current = current.Next;
+            }
 
-                if(current == null) Console.WriteLine("The value is not found in the list");
+            if(current == null) Console.WriteLine("The value is not found in the list");
             
             prev.Next = current.Next;
         }
@@ -109,6 +109,26 @@ namespace challenges_and_data_structures.DataStructures.LinkedList
                     current = current.Next;
                 }
                 Console.WriteLine("Null");
+            }
+        }
+        public void RemoveDuplicate()
+        {
+            var current = head;
+
+            while (current != null)
+            {
+                Node? tracker = current.Next;
+
+                while (tracker != null)
+                {
+                    if (current.Value == tracker.Value)
+                    {
+                        Remove(tracker.Value);
+                        break;
+                    }
+                    tracker = tracker.Next;
+                }
+                current = current.Next;
             }
         }
     }
