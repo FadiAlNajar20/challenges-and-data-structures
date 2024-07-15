@@ -3,6 +3,7 @@ using challenges_and_data_structures.DataStructures.LinkedList;
 using System.Collections.Generic;
 using static System.Net.Mime.MediaTypeNames;
 
+
 namespace challenges_and_data_structures
 {
     public class Program
@@ -159,18 +160,20 @@ namespace challenges_and_data_structures
             //Console.WriteLine();
 
             LinkedList list1 = new LinkedList();
-            list1.AddToHead(5);
-            list1.AddToHead(10);
-            list1.AddToHead(20);
-            list1.AddToHead(30);
+            int[] arr = {5, 10, 20, 30};
+            for (int i = 0; i < arr.Length; i++)
+            {
+                list1.AddToHead(arr[i]);
+
+            }
             Console.WriteLine("ADD from Head: ");
             list1.PrintList();
 
             LinkedList list = new LinkedList();
-            list.AddToTial(5);
-            list.AddToTial(10);
-            list.AddToTial(20);
-            list.AddToTial(30);
+            int[] arr1 = { 5, 10, 20, 30 };
+            for (int i = 0; i < arr1.Length; i++)
+                list.AddToTial(arr1[i]);
+
             Console.WriteLine("\nADD from Tail: ");
             list.PrintList();
 
@@ -185,6 +188,35 @@ namespace challenges_and_data_structures
             Console.WriteLine("\nIs includes number '20'");
             bool result = list.Includes(20);
             Console.WriteLine(result);
+
+            LinkedList duplicate1 = new LinkedList(); 
+            LinkedList duplicate2 = new LinkedList(); 
+            LinkedList duplicate3 = new LinkedList();
+
+            int[] values1 = { 1, 2, 3, 2, 4, 3 };
+            int[] values2 = { 5, 20, 20, 10, 5, 10 };
+            int[] values3 = { 7,7,7,7 };
+
+            Console.WriteLine("\nCase #1");
+            for (int i = 0; i < values1.Length; i++)
+                duplicate1.AddToTial(values1[i]);
+            duplicate1.PrintList();
+            duplicate1.RemoveDuplicate();
+            duplicate1.PrintList();
+
+            Console.WriteLine("\nCase #2");
+            for (int i = 0; i < values2.Length; i++)
+                duplicate2.AddToTial(values2[i]);
+            duplicate2.PrintList();
+            duplicate2.RemoveDuplicate();
+            duplicate2.PrintList();
+
+            Console.WriteLine("\nCase #3");
+            for (int i = 0; i < values3.Length; i++)
+                duplicate3.AddToTial(values3[i]);
+            duplicate3.PrintList();
+            duplicate3.RemoveDuplicate();
+            duplicate3.PrintList();
 
             Console.ReadKey();
         }
