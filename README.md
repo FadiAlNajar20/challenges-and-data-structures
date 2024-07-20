@@ -38,4 +38,7 @@
 [Go To README](./DataStructures/LinkedList/README.md)
 
 # Linked List Remove Duplicates
-[Remove Duplicates](./DataStructures/LinkedList/RemoveDuplicates/README.md)
+[Go To README](./DataStructures/LinkedList/RemoveDuplicates/README.md)
+
+# Merge Sorted Linked Lists
+[Go To README](./DataStructures/LinkedList/MergeSorted/README.md)

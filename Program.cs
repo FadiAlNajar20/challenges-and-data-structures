@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using static System.Net.Mime.MediaTypeNames;
 
 
-namespace challenges_and_data_structures
+namespace challenges_and_data_structuresx
 {
     public class Program
     {
@@ -159,66 +159,129 @@ namespace challenges_and_data_structures
             //Console.WriteLine($"Output: \"{ReverseWords.Reverse_Words(case3)}\"");
             //Console.WriteLine();
 
+            //LinkedList list1 = new LinkedList();
+            //int[] arr = {5, 10, 20, 30};
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    list1.AddToHead(arr[i]);
+
+            //}
+            //Console.WriteLine("ADD from Head: ");
+            //list1.PrintList();
+
+            //LinkedList list = new LinkedList();
+            //int[] arr1 = { 5, 10, 20, 30 };
+            //for (int i = 0; i < arr1.Length; i++)
+            //    list.AddToTial(arr1[i]);
+
+            //Console.WriteLine("\nADD from Tail: ");
+            //list.PrintList();
+
+            //Console.WriteLine("\nRemov The Head");
+            //list.RemoveHead();
+            //list.PrintList();
+
+            //Console.WriteLine("\nRemov The specific number");
+            //list.Remove(10);
+            //list.PrintList();
+
+            //Console.WriteLine("\nIs includes number '20'");
+            //bool result = list.Includes(20);
+            //Console.WriteLine(result);
+
+            //LinkedList duplicate1 = new LinkedList(); 
+            //LinkedList duplicate2 = new LinkedList(); 
+            //LinkedList duplicate3 = new LinkedList();
+
+            //int[] values1 = { 1, 2, 3, 2, 4, 3 };
+            //int[] values2 = { 5, 20, 20, 10, 5, 10 };
+            //int[] values3 = { 7,7,7,7 };
+
+            //Console.WriteLine("\nCase #1");
+            //for (int i = 0; i < values1.Length; i++)
+            //    duplicate1.AddToTial(values1[i]);
+            //duplicate1.PrintList();
+            //duplicate1.RemoveDuplicate();
+            //duplicate1.PrintList();
+
+            //Console.WriteLine("\nCase #2");
+            //for (int i = 0; i < values2.Length; i++)
+            //    duplicate2.AddToTial(values2[i]);
+            //duplicate2.PrintList();
+            //duplicate2.RemoveDuplicate();
+            //duplicate2.PrintList();
+
+            //Console.WriteLine("\nCase #3");
+            //for (int i = 0; i < values3.Length; i++)
+            //    duplicate3.AddToTial(values3[i]);
+            //duplicate3.PrintList();
+            //duplicate3.RemoveDuplicate();
+            //duplicate3.PrintList();
+
+            LinkedList<int> list = new LinkedList<int>();
+
             LinkedList list1 = new LinkedList();
-            int[] arr = {5, 10, 20, 30};
-            for (int i = 0; i < arr.Length; i++)
-            {
-                list1.AddToHead(arr[i]);
+            LinkedList list_1 = new LinkedList();
+            LinkedList list2 = new LinkedList();
+            LinkedList list_2 = new LinkedList();
+            LinkedList list3 = new LinkedList();
+            LinkedList list_3 = new LinkedList();
 
-            }
-            Console.WriteLine("ADD from Head: ");
-            list1.PrintList();
+            int[] case1 = { 1, 3, 5 };
+            int[] case_1 = { 2, 4, 6 };
+            int[] case2 = { 5, 10, 15 };
+            int[] case_2 = { 2, 3, 20 }; 
+            int[] case3 = { 10, 20, 30 };
+            int[] case_3 = { 5, 15, 25, 35 };
 
-            LinkedList list = new LinkedList();
-            int[] arr1 = { 5, 10, 20, 30 };
-            for (int i = 0; i < arr1.Length; i++)
-                list.AddToTial(arr1[i]);
-
-            Console.WriteLine("\nADD from Tail: ");
-            list.PrintList();
-
-            Console.WriteLine("\nRemov The Head");
-            list.RemoveHead();
-            list.PrintList();
-
-            Console.WriteLine("\nRemov The specific number");
-            list.Remove(10);
-            list.PrintList();
-
-            Console.WriteLine("\nIs includes number '20'");
-            bool result = list.Includes(20);
-            Console.WriteLine(result);
-
-            LinkedList duplicate1 = new LinkedList(); 
-            LinkedList duplicate2 = new LinkedList(); 
-            LinkedList duplicate3 = new LinkedList();
-
-            int[] values1 = { 1, 2, 3, 2, 4, 3 };
-            int[] values2 = { 5, 20, 20, 10, 5, 10 };
-            int[] values3 = { 7,7,7,7 };
+            AddToLinkedList(list1, case1);
+            AddToLinkedList(list_1, case_1);
 
             Console.WriteLine("\nCase #1");
-            for (int i = 0; i < values1.Length; i++)
-                duplicate1.AddToTial(values1[i]);
-            duplicate1.PrintList();
-            duplicate1.RemoveDuplicate();
-            duplicate1.PrintList();
+            list1.PrintList();
+            list_1.PrintList();
+            // Merge and sort
+            list1.MergeLists(list1, list_1);
+            list1.SortedList();
+
+            Console.WriteLine("\nOutput #1");
+            list1.PrintList();
+
+            AddToLinkedList(list2, case2);
+            AddToLinkedList(list_2, case_2);
 
             Console.WriteLine("\nCase #2");
-            for (int i = 0; i < values2.Length; i++)
-                duplicate2.AddToTial(values2[i]);
-            duplicate2.PrintList();
-            duplicate2.RemoveDuplicate();
-            duplicate2.PrintList();
+            list2.PrintList();
+            list_2.PrintList();
+            // Merge and sort
+            list2.MergeLists(list2, list_2);
+            list2.SortedList();
+
+            Console.WriteLine("\nOutput #2");
+            list2.PrintList();
+
+            AddToLinkedList(list3, case3);
+            AddToLinkedList(list_3, case_3);
 
             Console.WriteLine("\nCase #3");
-            for (int i = 0; i < values3.Length; i++)
-                duplicate3.AddToTial(values3[i]);
-            duplicate3.PrintList();
-            duplicate3.RemoveDuplicate();
-            duplicate3.PrintList();
+            list3.PrintList();
+            list_3.PrintList();
+            // Merge and sort
+            list3.MergeLists(list3, list_3);
+            list3.SortedList();
+
+            Console.WriteLine("\nOutput #3");
+            list3.PrintList();
 
             Console.ReadKey();
+        }
+
+        static void AddToLinkedList(LinkedList list, int[] values)
+        {
+            foreach (var value in values)
+            {
+                list.AddToTial(value);
+            }
         }
 
         public static int MaximumValue(int[] arr)   

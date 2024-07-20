@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,7 +10,7 @@ namespace challenges_and_data_structures.DataStructures.LinkedList
 {
     public class LinkedList
     {
-        public Node head;
+        public Node? head;
         public int Length { get; set; }
 
         public LinkedList()
@@ -129,6 +131,57 @@ namespace challenges_and_data_structures.DataStructures.LinkedList
                     tracker = tracker.Next;
                 }
                 current = current.Next;
+            }
+        }
+
+        public Node MergeLists(LinkedList list1, LinkedList list2)
+        {
+            if (list1.IsEmpty() && list2.IsEmpty())
+            {
+                Console.WriteLine("Both lists are empty.");
+                return null;
+            }
+            else if (list1.IsEmpty())
+            {
+                Console.WriteLine("The first list is empty.");
+                return list2.head;
+            }
+            else if (list2.IsEmpty())
+            {
+                Console.WriteLine("The second list is empty.");
+                return list1.head;
+            }
+
+            Node current1 = list1.head;
+            while (current1.Next != null)
+            {
+                current1 = current1.Next;
+            }
+            current1.Next = list2.head;
+
+            return list1.head;
+        }
+
+        public void SortedList()
+        {
+          Node current = head, travers = null;
+            
+
+            while (current != null)
+            {
+                travers = current.Next;
+
+                while (travers != null)
+                {
+                    if(current.Value.CompareTo(travers.Value) > 0) 
+                    {
+                        var temp = current.Value;
+                        current.Value = travers.Value;  
+                        travers.Value = temp;
+                    }
+                    travers = travers.Next;
+                }
+                current = current.Next; 
             }
         }
     }
