@@ -218,60 +218,114 @@ namespace challenges_and_data_structuresx
             //duplicate3.RemoveDuplicate();
             //duplicate3.PrintList();
 
-            LinkedList<int> list = new LinkedList<int>();
+            //LinkedList<int> list = new LinkedList<int>();
 
-            LinkedList list1 = new LinkedList();
-            LinkedList list_1 = new LinkedList();
-            LinkedList list2 = new LinkedList();
-            LinkedList list_2 = new LinkedList();
-            LinkedList list3 = new LinkedList();
-            LinkedList list_3 = new LinkedList();
+            //LinkedList list1 = new LinkedList();
+            //LinkedList list_1 = new LinkedList();
+            //LinkedList list2 = new LinkedList();
+            //LinkedList list_2 = new LinkedList();
+            //LinkedList list3 = new LinkedList();
+            //LinkedList list_3 = new LinkedList();
 
-            int[] case1 = { 1, 3, 5 };
-            int[] case_1 = { 2, 4, 6 };
-            int[] case2 = { 5, 10, 15 };
-            int[] case_2 = { 2, 3, 20 }; 
-            int[] case3 = { 10, 20, 30 };
-            int[] case_3 = { 5, 15, 25, 35 };
+            //int[] case1 = { 1, 3, 5 };
+            //int[] case_1 = { 2, 4, 6 };
+            //int[] case2 = { 5, 10, 15 };
+            //int[] case_2 = { 2, 3, 20 }; 
+            //int[] case3 = { 10, 20, 30 };
+            //int[] case_3 = { 5, 15, 25, 35 };
 
-            AddToLinkedList(list1, case1);
-            AddToLinkedList(list_1, case_1);
+            //AddToLinkedList(list1, case1);
+            //AddToLinkedList(list_1, case_1);
 
-            Console.WriteLine("\nCase #1");
-            list1.PrintList();
-            list_1.PrintList();
-            // Merge and sort
-            list1.MergeLists(list1, list_1);
-            list1.SortedList();
+            //Console.WriteLine("\nCase #1");
+            //list1.PrintList();
+            //list_1.PrintList();
+            //// Merge and sort
+            //list1.MergeLists(list1, list_1);
+            //list1.SortedList();
 
-            Console.WriteLine("\nOutput #1");
-            list1.PrintList();
+            //Console.WriteLine("\nOutput #1");
+            //list1.PrintList();
 
-            AddToLinkedList(list2, case2);
-            AddToLinkedList(list_2, case_2);
+            //AddToLinkedList(list2, case2);
+            //AddToLinkedList(list_2, case_2);
 
-            Console.WriteLine("\nCase #2");
-            list2.PrintList();
-            list_2.PrintList();
-            // Merge and sort
-            list2.MergeLists(list2, list_2);
-            list2.SortedList();
+            //Console.WriteLine("\nCase #2");
+            //list2.PrintList();
+            //list_2.PrintList();
+            //// Merge and sort
+            //list2.MergeLists(list2, list_2);
+            //list2.SortedList();
 
-            Console.WriteLine("\nOutput #2");
-            list2.PrintList();
+            //Console.WriteLine("\nOutput #2");
+            //list2.PrintList();
 
-            AddToLinkedList(list3, case3);
-            AddToLinkedList(list_3, case_3);
+            //AddToLinkedList(list3, case3);
+            //AddToLinkedList(list_3, case_3);
 
-            Console.WriteLine("\nCase #3");
-            list3.PrintList();
-            list_3.PrintList();
-            // Merge and sort
-            list3.MergeLists(list3, list_3);
-            list3.SortedList();
+            //Console.WriteLine("\nCase #3");
+            //list3.PrintList();
+            //list_3.PrintList();
+            //// Merge and sort
+            //list3.MergeLists(list3, list_3);
+            //list3.SortedList();
 
-            Console.WriteLine("\nOutput #3");
-            list3.PrintList();
+            //Console.WriteLine("\nOutput #3");
+            //list3.PrintList();
+            Console.WriteLine("");
+            //----------------------------------------------------------------------------------
+            // Create a new stack
+            Stack stack = new Stack();
+
+            // Push nodes onto the stack
+            stack.Push(10); // Stack: Top -> 10
+            stack.Push(5);  // Stack: Top -> 5 -> 10
+
+            // Print the stack
+            Console.WriteLine("Stack after pushing 10 and 5:");
+            stack.PrintStack();
+
+            // Pop a node from the stack
+            int popped = stack.Pop(); // popped: 5
+            Console.WriteLine($"\nPopped value: {popped}");
+
+            // Print the stack after popping
+            Console.WriteLine("Stack after popping the top value:");
+            stack.PrintStack();
+
+            // Peek the top node
+            int peeked = stack.Peek(); // peeked: 10
+            Console.WriteLine($"\nPeeked value: {peeked}");
+
+            // Check if the stack is empty
+            bool isEmpty = stack.IsEmpty(); // isEmpty: false
+            Console.WriteLine($"\nIs the stack empty? {isEmpty}");
+            Console.WriteLine("-------------------------------------------------------");
+            //-------------------------------------------------------
+            Queue queue = new Queue();
+            // Push nodes onto the queue
+            queue.Enqueue(10); // Queue: Top -> 10
+            queue.Enqueue(5);  // Queue: Top -> 10 -> 5
+
+            // Print the stack
+            Console.WriteLine("\nQueue after pushing 10 and 5:");
+            queue.PrintQueue();
+
+            // Pop a node from the Queue
+            int dequeue = queue.Dequeue(); // dequeue: 10
+            Console.WriteLine($"\nDequeue value: {dequeue}");
+
+            // Print the stack after popping
+            Console.WriteLine("Queue after dequeue the top value:");
+            stack.PrintStack();
+
+            // Peek the top node
+            int peeked2 = queue.Peek(); // peeked: 5
+            Console.WriteLine($"\nPeeked value: {peeked2}");
+
+            // Check if the stack is empty
+            bool isEmpty2 = queue.IsEmpty(); // isEmpty: false
+            Console.WriteLine($"\nIs the Queue empty? {isEmpty2}");
 
             Console.ReadKey();
         }
