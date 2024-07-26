@@ -42,3 +42,6 @@
 
 # Merge Sorted Linked Lists
 [Go To README](./DataStructures/LinkedList/MergeSorted/README.md)
+
+# Stack & Queue
+[Go To README](./DataStructures/Stack&Queue/README.md)
