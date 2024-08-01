@@ -45,3 +45,6 @@
 
 # Stack & Queue
 [Go To README](./DataStructures/Stack&Queue/README.md)
+
+# Reversing a Stack Using a Queue
+[Go To README](./DataStructures/Stack&Queue/ReverseStackUsingQueue/README.md)

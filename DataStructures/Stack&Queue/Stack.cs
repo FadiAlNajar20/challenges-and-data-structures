@@ -37,5 +37,22 @@ namespace challenges_and_data_structures
         {
             list.PrintList();
         }
+
+        public void ReverseStack()
+        {
+            if (IsEmpty()) return;
+
+            Queue queue = new Queue();
+
+            while (!IsEmpty())
+            {
+                queue.Enqueue(Pop());
+            }
+
+            while (!queue.IsEmpty())
+            {
+                Push(queue.Dequeue());
+            }
+        }
     }
 }
