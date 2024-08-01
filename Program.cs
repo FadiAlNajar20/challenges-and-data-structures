@@ -272,60 +272,86 @@ namespace challenges_and_data_structuresx
 
             //Console.WriteLine("\nOutput #3");
             //list3.PrintList();
-            Console.WriteLine("");
-            //----------------------------------------------------------------------------------
-            // Create a new stack
+            //Console.WriteLine("");
+            ////----------------------------------------------------------------------------------
+            //// Create a new stack
+            //Stack stack = new Stack();
+
+            //// Push nodes onto the stack
+            //stack.Push(10); // Stack: Top -> 10
+            //stack.Push(5);  // Stack: Top -> 5 -> 10
+
+            //// Print the stack
+            //Console.WriteLine("Stack after pushing 10 and 5:");
+            //stack.PrintStack();
+
+            //// Pop a node from the stack
+            //int popped = stack.Pop(); // popped: 5
+            //Console.WriteLine($"\nPopped value: {popped}");
+
+            //// Print the stack after popping
+            //Console.WriteLine("Stack after popping the top value:");
+            //stack.PrintStack();
+
+            //// Peek the top node
+            //int peeked = stack.Peek(); // peeked: 10
+            //Console.WriteLine($"\nPeeked value: {peeked}");
+
+            //// Check if the stack is empty
+            //bool isEmpty = stack.IsEmpty(); // isEmpty: false
+            //Console.WriteLine($"\nIs the stack empty? {isEmpty}");
+            //Console.WriteLine("-------------------------------------------------------");
+            ////-------------------------------------------------------
+            //Queue queue = new Queue();
+            //// Push nodes onto the queue
+            //queue.Enqueue(10); // Queue: Top -> 10
+            //queue.Enqueue(5);  // Queue: Top -> 10 -> 5
+
+            //// Print the stack
+            //Console.WriteLine("\nQueue after pushing 10 and 5:");
+            //queue.PrintQueue();
+
+            //// Pop a node from the Queue
+            //int dequeue = queue.Dequeue(); // dequeue: 10
+            //Console.WriteLine($"\nDequeue value: {dequeue}");
+
+            //// Print the stack after popping
+            //Console.WriteLine("Queue after dequeue the top value:");
+            //stack.PrintStack();
+
+            //// Peek the top node
+            //int peeked2 = queue.Peek(); // peeked: 5
+            //Console.WriteLine($"\nPeeked value: {peeked2}");
+
+            //// Check if the stack is empty
+            //bool isEmpty2 = queue.IsEmpty(); // isEmpty: false
+            //Console.WriteLine($"\nIs the Queue empty? {isEmpty2}");
+
             Stack stack = new Stack();
+            stack.Push(1);
+            stack.Push(2);
+            stack.Push(3);
+            stack.Push(4);
+            stack.Push(5);
 
-            // Push nodes onto the stack
-            stack.Push(10); // Stack: Top -> 10
-            stack.Push(5);  // Stack: Top -> 5 -> 10
-
-            // Print the stack
-            Console.WriteLine("Stack after pushing 10 and 5:");
+            Console.WriteLine("Original Stack:");
             stack.PrintStack();
 
-            // Pop a node from the stack
-            int popped = stack.Pop(); // popped: 5
-            Console.WriteLine($"\nPopped value: {popped}");
+            stack.ReverseStack();
 
-            // Print the stack after popping
-            Console.WriteLine("Stack after popping the top value:");
+            Console.WriteLine("Reversed Stack:");
             stack.PrintStack();
 
-            // Peek the top node
-            int peeked = stack.Peek(); // peeked: 10
-            Console.WriteLine($"\nPeeked value: {peeked}");
+            stack.Push(6);
+            stack.Push(7);
 
-            // Check if the stack is empty
-            bool isEmpty = stack.IsEmpty(); // isEmpty: false
-            Console.WriteLine($"\nIs the stack empty? {isEmpty}");
-            Console.WriteLine("-------------------------------------------------------");
-            //-------------------------------------------------------
-            Queue queue = new Queue();
-            // Push nodes onto the queue
-            queue.Enqueue(10); // Queue: Top -> 10
-            queue.Enqueue(5);  // Queue: Top -> 10 -> 5
-
-            // Print the stack
-            Console.WriteLine("\nQueue after pushing 10 and 5:");
-            queue.PrintQueue();
-
-            // Pop a node from the Queue
-            int dequeue = queue.Dequeue(); // dequeue: 10
-            Console.WriteLine($"\nDequeue value: {dequeue}");
-
-            // Print the stack after popping
-            Console.WriteLine("Queue after dequeue the top value:");
+            Console.WriteLine("After Adding More Elements:");
             stack.PrintStack();
 
-            // Peek the top node
-            int peeked2 = queue.Peek(); // peeked: 5
-            Console.WriteLine($"\nPeeked value: {peeked2}");
+            stack.ReverseStack();
 
-            // Check if the stack is empty
-            bool isEmpty2 = queue.IsEmpty(); // isEmpty: false
-            Console.WriteLine($"\nIs the Queue empty? {isEmpty2}");
+            Console.WriteLine("After Reversing Again:");
+            stack.PrintStack();
 
             Console.ReadKey();
         }
