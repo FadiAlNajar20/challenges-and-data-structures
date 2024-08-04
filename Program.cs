@@ -327,30 +327,48 @@ namespace challenges_and_data_structuresx
             //bool isEmpty2 = queue.IsEmpty(); // isEmpty: false
             //Console.WriteLine($"\nIs the Queue empty? {isEmpty2}");
 
+            //Stack stack = new Stack();
+            //stack.Push(1);
+            //stack.Push(2);
+            //stack.Push(3);
+            //stack.Push(4);
+            //stack.Push(5);
+
+            //Console.WriteLine("Original Stack:");
+            //stack.PrintStack();
+
+            //stack.ReverseStack();
+
+            //Console.WriteLine("Reversed Stack:");
+            //stack.PrintStack();
+
+            //stack.Push(6);
+            //stack.Push(7);
+
+            //Console.WriteLine("After Adding More Elements:");
+            //stack.PrintStack();
+
+            //stack.ReverseStack();
+
+            //Console.WriteLine("After Reversing Again:");
+            //stack.PrintStack();
+
+
             Stack stack = new Stack();
-            stack.Push(1);
-            stack.Push(2);
-            stack.Push(3);
-            stack.Push(4);
-            stack.Push(5);
-
-            Console.WriteLine("Original Stack:");
-            stack.PrintStack();
-
-            stack.ReverseStack();
-
-            Console.WriteLine("Reversed Stack:");
-            stack.PrintStack();
-
-            stack.Push(6);
             stack.Push(7);
-
-            Console.WriteLine("After Adding More Elements:");
+            stack.Push(14);
+            stack.Push(3);
+            stack.Push(8);
+            stack.Push(5);
+            stack.PrintStack();
+            stack.DeleteMiddleElement();
             stack.PrintStack();
 
-            stack.ReverseStack();
+            stack.Push(2);
+            stack.Push(9);
 
-            Console.WriteLine("After Reversing Again:");
+            stack.PrintStack();
+            stack.DeleteMiddleElement();
             stack.PrintStack();
 
             Console.ReadKey();

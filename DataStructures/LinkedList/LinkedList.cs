@@ -26,11 +26,15 @@ namespace challenges_and_data_structures.DataStructures.LinkedList
         public void AddToHead(int newValue)
         {
             Node node = new Node(newValue);
-            if (IsEmpty()) head = node;
+            if (IsEmpty()) {
+                head = node;
+                Length++;
+            }
             else
             {
                 node.Next = head;
                 head = node;
+                Length++;
             }
         }
 

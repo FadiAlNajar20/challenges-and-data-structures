@@ -54,5 +54,39 @@ namespace challenges_and_data_structures
                 Push(queue.Dequeue());
             }
         }
+
+        public int DeleteMiddleElement()
+        {
+            if (IsEmpty() || list.Length == 1)
+            {
+                throw new InvalidOperationException("Stack does not have a middle element");
+            }
+
+            int midPosition = list.Length / 2;
+            Node current = list.head;
+            Node previous = null;
+
+            for (int i = 0; i < midPosition; i++)
+            {
+                previous = current;
+                current = current.Next;
+            }
+
+            int removedValue = current.Value;
+
+            if (previous != null)
+            {
+                previous.Next = current.Next;
+            }
+            else
+            {
+                list.head = current.Next;
+            }
+
+            list.Length--;
+
+            return removedValue;
+        }
+
     }
 }
