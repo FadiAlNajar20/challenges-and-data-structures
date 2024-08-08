@@ -48,3 +48,6 @@
 
 # Reversing a Stack Using a Queue
 [Go To README](./DataStructures/Stack&Queue/ReverseStackUsingQueue/README.md)
+
+# Min Stack Challenge
+[Go To README](./DataStructures/Stack&Queue/MisStack/README.md)

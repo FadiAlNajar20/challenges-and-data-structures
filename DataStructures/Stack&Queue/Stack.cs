@@ -1,14 +1,16 @@
-﻿using challenges_and_data_structures.DataStructures.LinkedList;
+﻿ using challenges_and_data_structures.DataStructures.LinkedList;
 
 namespace challenges_and_data_structures
 {
     public class Stack
     {
         private LinkedList list;
+        private LinkedList minList;
 
         public Stack()
         {
-            list = new LinkedList();    
+            list = new LinkedList();
+            minList = new LinkedList();
         }
 
         public bool IsEmpty()
@@ -19,12 +21,35 @@ namespace challenges_and_data_structures
         public void Push(int data)
         {
             list.AddToHead(data);
+            if (minList.IsEmpty() || data <= minList.head.Value)
+            {
+                minList.AddToHead(data);
+            }
         }
 
         public int Pop()
         {
-            if (IsEmpty()) throw new InvalidOperationException("Stack is empty");
-            return list.RemoveHead();
+            if (IsEmpty())
+                throw new InvalidOperationException("Stack is empty");
+
+            // Pop from the main stack
+            int poppedValue = list.RemoveHead();
+
+            // Pop from the min stack if needed
+            if (poppedValue == minList.head.Value)
+            {
+                minList.RemoveHead();
+            }
+
+            return poppedValue;
+        }
+
+        public int Top()
+        {
+            if (IsEmpty())
+                throw new InvalidOperationException("Stack is empty");
+
+            return list.head.Value;
         }
 
         public int Peek()
@@ -86,6 +111,14 @@ namespace challenges_and_data_structures
             list.Length--;
 
             return removedValue;
+        }
+
+        public int GetMin()
+        {
+            if (minList.IsEmpty())
+                throw new InvalidOperationException("Stack is empty");
+
+            return minList.head.Value;
         }
 
     }

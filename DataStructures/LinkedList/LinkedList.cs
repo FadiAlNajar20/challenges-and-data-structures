@@ -60,6 +60,7 @@ namespace challenges_and_data_structures.DataStructures.LinkedList
             Node node = head;
             head = node.Next;
             node.Next = null;
+            Length--;
             return node.Value;
            
         }
