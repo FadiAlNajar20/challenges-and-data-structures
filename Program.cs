@@ -354,22 +354,53 @@ namespace challenges_and_data_structuresx
             //stack.PrintStack();
 
 
+            //Stack stack = new Stack();
+            //stack.Push(7);
+            //stack.Push(14);
+            //stack.Push(3);
+            //stack.Push(8);
+            //stack.Push(5);
+            //stack.PrintStack();
+            //stack.DeleteMiddleElement();
+            //stack.PrintStack();
+
+            //stack.Push(2);
+            //stack.Push(9);
+
+            //stack.PrintStack();
+            //stack.DeleteMiddleElement();
+            //stack.PrintStack();
+
             Stack stack = new Stack();
+
+            stack.Push(15);
             stack.Push(7);
-            stack.Push(14);
+            stack.Push(12);
             stack.Push(3);
-            stack.Push(8);
-            stack.Push(5);
-            stack.PrintStack();
-            stack.DeleteMiddleElement();
-            stack.PrintStack();
+
+            stack.PrintStack(); // Output: Top -> 3 -> 12 -> 7 -> 15
+
+            int min = stack.GetMin(); // min: 3
+            Console.WriteLine($"Min: {min}");
+
+            int popped = stack.Pop(); // popped: 3
+            Console.WriteLine($"Popped: {popped}");
+            stack.PrintStack(); // Output: Top -> 12 -> 7 -> 15
+
+            min = stack.GetMin(); // min: 7
+            Console.WriteLine($"Min: {min}");
+
+            int peeked = stack.Top(); // peeked: 12
+            Console.WriteLine($"Top: {peeked}");
 
             stack.Push(2);
-            stack.Push(9);
+            stack.PrintStack(); // Output: Top -> 2 -> 12 -> 7 -> 15
 
-            stack.PrintStack();
-            stack.DeleteMiddleElement();
-            stack.PrintStack();
+            min = stack.GetMin(); // min: 2
+            Console.WriteLine($"Min: {min}");
+
+            bool isEmpty = stack.IsEmpty();
+            Console.WriteLine($"Is Empty: {isEmpty}");
 
             Console.ReadKey();
         }
