@@ -11,19 +11,24 @@ namespace challenges_and_data_structuresx
         static void Main(string[] args)
         {
 
-            Console.WriteLine("\nBinary Search Tree:");
-            BinarySearchTree bst = new BinarySearchTree();
-            bst.Add(10);
-            bst.Add(5);
-            bst.Add(15);
-            bst.Add(7);
+            BinaryTree Btree = new BinaryTree();
+            Btree.Root = new Node(4);
+            Btree.Root.Left = new Node(8);
+            Btree.Root.Right = new Node(7);
+            Btree.Root.Left.Left = new Node(12);
+            Btree.Root.Left.Right = new Node(9);
 
-            Console.WriteLine("Contains 7: " + bst.Contains(7)); 
-            Console.WriteLine("Contains 5: " + bst.Contains(5)); 
-            Console.WriteLine("Contains 20: " + bst.Contains(20)); 
+            // Original inorder traversal
+            List<int> originalInorder = Btree.InorderTraversal();
+            Console.WriteLine("Original Inorder: " + string.Join(", ", originalInorder)); // Output: [12, 8, 9, 4, 7]
 
-            bst.Remove(5);
-            Console.WriteLine("Contains 5 after removal: " + bst.Contains(5)); 
+            // Mirror the tree
+            Btree.Mirror();
+
+            // Inorder traversal after mirroring
+            List<int> mirroredInorder = Btree.InorderTraversal();
+            Console.WriteLine("Mirrored Inorder: " + string.Join(", ", mirroredInorder)); // Output: [7, 4, 9, 8, 12]
+
             Console.ReadKey();
         }      
     }
