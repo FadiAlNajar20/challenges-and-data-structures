@@ -45,5 +45,38 @@
             Print(node.Left, indent, true);
             Print(node.Right, indent, false);
         }
+        public void MirrorTree(Node node)
+        {
+            if (node == null) return;
+
+            MirrorTree(node.Left);
+            MirrorTree(node.Right);
+
+            Node temp = node.Left;
+            node.Left = node.Right;
+            node.Right = temp;
+        }
+
+        public List<int> InorderTraversal(Node node)
+        {
+            List<int> result = new List<int>();
+            if (node != null)
+            {
+                result.AddRange(InorderTraversal(node.Left));
+                result.Add(node.Value);
+                result.AddRange(InorderTraversal(node.Right));
+            }
+            return result;
+        }
+
+        public void Mirror()
+        {
+            MirrorTree(Root);
+        }
+
+        public List<int> InorderTraversal()
+        {
+            return InorderTraversal(Root);
+        }
     }
 }
