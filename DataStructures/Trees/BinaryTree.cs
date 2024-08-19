@@ -78,5 +78,39 @@
         {
             return InorderTraversal(Root);
         }
+
+        public int FindSecondMax()
+        {
+            if (Root == null)
+                throw new InvalidOperationException("The tree is Empty");
+
+            int? max = null;
+            int? secondMax = null;
+            FindSecondMaxHelper(Root, ref max, ref secondMax);
+
+            if (secondMax == null)
+                throw new InvalidOperationException("The tree does not contain two distinct values.");
+
+            return secondMax.Value;
+        }
+
+        private void FindSecondMaxHelper(Node node, ref int? max, ref int? secondMax)
+        {
+            if (node == null)
+                return;
+
+            if (max == null || node.Value > max)
+            {
+                secondMax = max;
+                max = node.Value;
+            }
+            else if ((secondMax == null || node.Value > secondMax) && node.Value < max)
+            {
+                secondMax = node.Value;
+            }
+
+            FindSecondMaxHelper(node.Left, ref max, ref secondMax);
+            FindSecondMaxHelper(node.Right, ref max, ref secondMax);
+        }
     }
 }
