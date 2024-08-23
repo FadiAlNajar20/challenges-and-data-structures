@@ -51,3 +51,6 @@
 
 # Min Stack Challenge
 [Go To README](./DataStructures/Stack&Queue/MisStack/README.md)
+
+# Binary Tree - Sum of leaf nodes
+[Go To README](./DataStructures/Trees/LeafSum/README.md)
