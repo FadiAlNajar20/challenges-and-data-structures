@@ -112,5 +112,20 @@
             FindSecondMaxHelper(node.Left, ref max, ref secondMax);
             FindSecondMaxHelper(node.Right, ref max, ref secondMax);
         }
+        public int SumOfLeafNodes()
+        {
+            return SumOfLeafNodes(Root);
+        }
+
+        private int SumOfLeafNodes(Node node)
+        {
+            if (node == null)
+                return 0;
+
+            if (node.Left == null && node.Right == null)
+                return node.Value;
+
+            return SumOfLeafNodes(node.Left) + SumOfLeafNodes(node.Right);
+        }
     }
 }
