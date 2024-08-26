@@ -12,17 +12,25 @@ namespace challenges_and_data_structuresx
         {
 
             BinaryTree Btree = new BinaryTree();
-            Btree.Root = new Node(9);
-            Btree.Root.Left = new Node(8);
-            Btree.Root.Right = new Node(12);
+            Btree.Root = new Node(5);
+            Btree.Root.Left = new Node(13);
+            Btree.Root.Right = new Node(7);
             Btree.Root.Left.Left = new Node(3);
             Btree.Root.Left.Right = new Node(7);
-            Btree.Root.Right.Left = new Node(17);
-            Btree.Root.Right.Right = new Node(23);
+            Btree.Root.Right.Left = new Node(12);
+            Btree.Root.Right.Right = new Node(20);
+            Btree.Root.Left.Left.Left = new Node(1);
             Btree.Root.Left.Left.Right = new Node(4);
+            Btree.Root.Right.Left.Right = new Node(11);
 
-            int leafSum = Btree.SumOfLeafNodes(); // Output: 51
-            Console.WriteLine("The result is: " + leafSum);
+            List<int> largestValues = Btree.LargestValueEachLevel();
+            int count = -1;
+            foreach (var btree in largestValues)
+            {
+                count++;
+                Console.WriteLine($"Level {count}: " + btree);
+            }
+
             Console.ReadKey();
         }      
     }
