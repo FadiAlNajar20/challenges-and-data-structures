@@ -127,5 +127,35 @@
 
             return SumOfLeafNodes(node.Left) + SumOfLeafNodes(node.Right);
         }
+
+        public List<int> LargestValueEachLevel()
+        {
+            List<int> largestValues = new List<int>();
+            if (Root == null) return largestValues;
+
+            Queue<Node> queue = new Queue<Node>();
+            queue.Enqueue(Root);
+
+            while (queue.Count > 0)
+            {
+                int levelSize = queue.Count;
+                int maxAtLevel = int.MinValue;
+
+                for (int i = 0; i < levelSize; i++)
+                {
+                    Node current = queue.Dequeue();
+                    maxAtLevel = Math.Max(maxAtLevel, current.Value);
+
+                    if (current.Left != null) queue.Enqueue(current.Left);
+                    if (current.Right != null) queue.Enqueue(current.Right);
+                }
+
+                largestValues.Add(maxAtLevel);
+            }
+
+            return largestValues;
+        }
+
     }
-}
+
+    }
