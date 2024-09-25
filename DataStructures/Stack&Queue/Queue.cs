@@ -16,7 +16,7 @@ namespace challenges_and_data_structures
         {
             return list.IsEmpty();
         }
-
+      
         public void Enqueue(int data)
         {
             list.AddToTial(data);
