@@ -8,57 +8,9 @@ namespace challenges_and_data_structuresx
 {
     public class Program
     {
-        public static int[] ArrayReversal(int[] array)
-        {
-            int[] reversedArr = new int[array.Length];
-
-            for (int i = array.Length - 1; i >= 0; i--)
-            {
-                reversedArr[array.Length - 1 - i] = array[i];
-            }
-
-            return reversedArr;
-        }
-
-        static int MostFrequentNumber(int[] arr)
-        {
-
-            Dictionary<int, int> MostFrequency = new Dictionary<int, int>();
-            int maxFrequency = 0;
-            int mostFrequentNumber = arr[0];
-
-            foreach (int num in arr)
-            {
-                if (MostFrequency.ContainsKey(num))
-                {
-                    MostFrequency[num]++;
-                }
-                else
-                {
-                    MostFrequency[num] = 1;
-                }
-
-                if (MostFrequency[num] > maxFrequency)
-                {
-                    maxFrequency = MostFrequency[num];
-                    mostFrequentNumber = num;
-                }
-            }
-
-            return mostFrequentNumber;
-
-        }
-
-        static void Print(int[] arr)
-        {
-            foreach (int key in arr)
-            {
-                Console.Write(key + " ");
-            }
-            Console.WriteLine();
-        }
         static void Main(string[] args)
         {
+
             LinkedList list1 = new LinkedList();
             list1.AddToTail(1);
             list1.AddToTail(2);
@@ -187,25 +139,28 @@ namespace challenges_and_data_structuresx
         {
             List<int> newArr = new List<int>();
 
+            BinaryTree Btree = new BinaryTree();
+            Btree.Root = new Node(5);
+            Btree.Root.Left = new Node(13);
+            Btree.Root.Right = new Node(7);
+            Btree.Root.Left.Left = new Node(3);
+            Btree.Root.Left.Right = new Node(7);
+            Btree.Root.Right.Left = new Node(12);
+            Btree.Root.Right.Right = new Node(20);
+            Btree.Root.Left.Left.Left = new Node(1);
+            Btree.Root.Left.Left.Right = new Node(4);
+            Btree.Root.Right.Left.Right = new Node(11);
 
-            for (int i = 0; i < arr1.Length; i++)
+            List<int> largestValues = Btree.LargestValueEachLevel();
+            int count = -1;
+            foreach (var btree in largestValues)
             {
-                int value = arr1[i];
-                for (int j = 0; j < arr2.Length; j++)
-                {
-                    if (value == arr2[j])
-                    {
-                        newArr.Add(value);
-                    }
-                    else
-                    {
-                        continue;
-                    }
-                }
+                count++;
+                Console.WriteLine($"Level {count}: " + btree);
             }
-            return newArr.ToArray();
-        }
 
+            Console.ReadKey();
+        }      
     }
 }
 
