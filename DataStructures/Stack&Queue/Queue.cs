@@ -19,7 +19,7 @@ namespace challenges_and_data_structures
       
         public void Enqueue(int data)
         {
-            list.AddToTial(data);
+            list.AddToTail(data);
             Count++;
         }
 
