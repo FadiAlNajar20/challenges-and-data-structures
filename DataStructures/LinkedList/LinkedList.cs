@@ -38,7 +38,7 @@ namespace challenges_and_data_structures.DataStructures.LinkedList
             }
         }
 
-        public void AddToTial(int value)
+        public void AddToTail(int value)
         {
             var node = new Node(value);
             if (IsEmpty()) head = node;

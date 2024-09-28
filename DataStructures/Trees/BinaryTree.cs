@@ -156,6 +156,34 @@
             return largestValues;
         }
 
-    }
+        public void PrintRightView()
+        {
+            if (Root == null)
+            {
+                Console.WriteLine("The tree is empty.");
+                return;
+            }
 
+            PrintRightViewRecursive(Root, 0, -1);
+        }
+
+        private int PrintRightViewRecursive(Node node, int currentLevel, int maxLevel)
+        {
+            if (node == null)
+            {
+                return maxLevel;
+            }
+
+            if (currentLevel > maxLevel)
+            {
+                Console.WriteLine(node.Value);
+                maxLevel = currentLevel;
+            }
+
+            maxLevel = PrintRightViewRecursive(node.Right, currentLevel + 1, maxLevel);
+            maxLevel = PrintRightViewRecursive(node.Left, currentLevel + 1, maxLevel);
+
+            return maxLevel;
+        }
     }
+}
