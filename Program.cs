@@ -10,7 +10,6 @@ namespace challenges_and_data_structuresx
     {
         static void Main(string[] args)
         {
-
             BinaryTree Btree1 = new BinaryTree();
             Btree1.Root = new Node(1);
             Btree1.Root.Left = new Node(2);

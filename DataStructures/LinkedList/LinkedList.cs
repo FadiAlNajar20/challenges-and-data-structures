@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace challenges_and_data_structures.DataStructures.LinkedList
 {
     public class LinkedList
@@ -188,6 +181,38 @@ namespace challenges_and_data_structures.DataStructures.LinkedList
                 }
                 current = current.Next; 
             }
+        }
+
+        public void RotateLeft(int k)
+        {
+            if (head == null || k == 0) return;
+
+            // Step 2: Effective rotation by k % length
+            k = k % Length;
+            if (k == 0) return; // No rotation needed
+
+            // Step 3: Traverse the list to find the last node
+            Node last = head;
+            while (last.Next != null)
+            {
+                last = last.Next;
+            }
+
+            // Step 4: Form a circular linked list
+            last.Next = head;
+
+            // Step 5: Traverse to find the k-th node
+            Node temp = head;
+            for (int i = 1; i < k; i++)
+            {
+                temp = temp.Next;
+            }
+
+            // Step 6: The new head is the (k+1)th node
+            head = temp.Next;
+
+            // Step 7: Break the circular link
+            temp.Next = null;
         }
     }
 }
