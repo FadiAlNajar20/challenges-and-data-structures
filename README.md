@@ -63,3 +63,6 @@
 
 # Binary Tree - Level with Maximum Number of Nodes
 [Go To README](./DataStructures/Trees/FindMaxLevelNodes/README.md)
+
+# Binary Tree - Minimum Depth
+[Go To README](./DataStructures/Trees/MinimumDepth/README.md)
