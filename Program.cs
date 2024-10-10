@@ -10,27 +10,24 @@ namespace challenges_and_data_structuresx
     {
         static void Main(string[] args)
         {
+            BinaryTree tree = new BinaryTree();
+            tree.Root = new Node(40);
+            tree.Root.Left = new Node(10);
+            tree.Root.Left.Left = new Node(5);
+            tree.Root.Left.Right = new Node(30);
+            tree.Root.Left.Right.Left = new Node(20);
+            tree.Root.Left.Right.Right = new Node(35);
+            tree.Root.Right = new Node(50);
+            tree.Root.Right.Right = new Node(60);
 
-            BinaryTree Btree1 = new BinaryTree();
-            Btree1.Root = new Node(1);
-            Btree1.Root.Left = new Node(2);
-            Btree1.Root.Right = new Node(3);
-            Btree1.Root.Left.Left = new Node(4);
-            Btree1.Root.Left.Right = new Node(5);
 
-            int minDepth1 = Btree1.FindMinimumDepth(); // Output: 2
-            Console.WriteLine("Minimum Depth: " + minDepth1);
+            Console.WriteLine("Original Binary Tree:");
+            tree.Print(tree.Root);
 
-            // Example 2
-            BinaryTree Btree2 = new BinaryTree();
-            Btree2.Root = new Node(1);
-            Btree2.Root.Left = new Node(2);
-            Btree2.Root.Right = new Node(3);
-            Btree2.Root.Left.Right = new Node(5);
-            Btree2.Root.Right.Right = new Node(6);
+            tree.ConvertToBST();
 
-            int minDepth2 = Btree2.FindMinimumDepth(); // Output: 3
-            Console.WriteLine("Minimum Depth: " + minDepth2);
+            Console.WriteLine("\nConverted Binary Search Tree:");
+            tree.Print(tree.Root);
 
             Console.ReadKey();
         }      

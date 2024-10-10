@@ -257,5 +257,40 @@
 
             return 0; 
         }
+
+        private void CollectValues(Node node, List<int> values)
+        {
+            if (node == null) return;
+            CollectValues(node.Left, values);
+            values.Add(node.Value);
+            CollectValues(node.Right, values);
+        }
+
+        private void AssignValues(Node node, Queue<int> values)
+        {
+            if (node == null) return;
+            AssignValues(node.Left, values);
+            node.Value = values.Dequeue();  // Replace node value with sorted values
+            AssignValues(node.Right, values);
+        }
+
+        public void ConvertToBST()
+        {
+            if (Root == null)
+            {
+                throw new InvalidOperationException("The tree is empty.");
+            }
+
+            // Step 1: Collect all values from the tree
+            List<int> values = new List<int>();
+            CollectValues(Root, values);
+
+            // Step 2: Sort the collected values
+            values.Sort();
+
+            // Step 3: Assign the sorted values back to the tree (in-order)
+            Queue<int> sortedValues = new Queue<int>(values);  // Use Queue for ordered assignment
+            AssignValues(Root, sortedValues);
+        }
     }
 }
