@@ -68,4 +68,7 @@
 [Go To README](./DataStructures/Trees/FindMaxLevelNodes/README.md)
 
 # Binary Tree - Minimum Depth
-[Go To README](./DataStructures/Trees/MinimumDepth/README.md)
+[Go To README](./DataStructures/Trees/MinimumDepth/README.md).
+
+# Binary Tree to Binary Search Tree
+[Go To README](./DataStructures/Trees/BTreeToBST/README.md)
